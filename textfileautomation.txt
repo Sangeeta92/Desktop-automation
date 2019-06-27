@@ -1,0 +1,26 @@
+import pyautogui as p
+import time
+import pywinauto
+
+from pywinauto import Application
+
+
+app = Application(backend='uia').start(r'C:\Windows\System32\notepad.exe')
+
+time.sleep(5)
+
+p.typewrite("Hello python. \n This is my first desktop automation ")
+
+p.hotkey('ctrl','s')
+
+p.hotkey('ctrl','x')
+
+p.typewrite('sangeeta')
+
+time.sleep(2)
+
+p.hotkey('enter')
+
+time.sleep(3)
+
+p.hotkey('win','d')
